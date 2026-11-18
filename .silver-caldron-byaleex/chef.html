@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caldeirão de Prata</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="main-header" class="sidebar">
+        <div class="logo-container">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            
+            <button class="openbtn" onclick="openNav()">
+                <img src="assets/image/logo.png" alt="Logo Caldeirão" id="main-logo">
+            </button>
+        </div>
+
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <img src="assets/image/homeicon.png" class="nav-icon">
+                        <span class="nav-text">Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html" class="nav-link">
+                        <img src="assets/image/cardapioicon.png" class="nav-icon">
+                        <span class="nav-text">Cardápio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="restaurante.html" class="nav-link">
+                        <img src="assets/image/restauranticon.png" class="nav-icon">
+                        <span class="nav-text">Restaurante</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="chef.html" class="nav-link">
+                        <img src="assets/image/cheficon.png" class="nav-icon">
+                        <span class="nav-text">O Chef</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="chef-intro">
+            <h1 class="epic-title">O Alquimista</h1>
+            
+            <div class="history-block">
+                <h3>Magnus Riddle</h3>
+                <p>
+                    Magnus não é apenas um cozinheiro; ele é um estudioso das propriedades mágicas da matéria. 
+                    Formado com honras em Alquimia Superior, ele dedicou décadas para entender como as 
+                    emoções humanas podem ser alteradas através do paladar. No Caldeirão de Prata, 
+                    ele opera sua cozinha como um laboratório sagrado.
+                </p>
+                
+                <div class="image-wrapper">
+                    <img src="assets/image/magnus.png" alt="Magnus Riddle em seu laboratório" class="history-images">
+                </div>
+            </div>
+
+            <div class="history-block">
+                <h3>Filosofia Gastronômica</h3>
+                <p>
+                    "A perfeição não aceita pressa. Um ingrediente colhido sob a lua errada pode arruinar 
+                    uma vida de trabalho." Magnus acredita na sazonalidade mágica e no respeito aos 
+                    elementos. Sua cozinha é silenciosa, precisa e absoluta.
+                </p>
+            </div>
+        </section>
+
+        <section class="cards-top-container">
+            <div class="card card-black">
+                <h2>Especialidade: Infusões</h2>
+                <p>Mestre em extrair a essência pura de ervas extintas e flores raras das montanhas da Escócia.</p>
+            </div>
+            <div class="card card-black">
+                <h2>Prêmio Alquimia</h2>
+                <p>Vencedor por três anos consecutivos do Caldeirão de Ouro pela Sociedade Alquímica Internacional.</p>
+            </div>
+        </section>
+
+        <footer id="main-footer">
+            <div class="contato">
+                <p><strong>Telefone:</strong> (189) 9666-7666</p>
+                <p><strong>E-mail:</strong> contato@caldeiraodeprata.com</p>
+                <p><strong>Endereço:</strong> Av. Escondido dos Olhares Curiosos, 777</p>
+            </div>
+
+            <div class="copyright">
+                <p style="margin-top: 50px;">&copy; 2026 Caldeirão de Prata - Desenvolvido por Lumin</p>
+                <p>A magia está nos detalhes.</p>
+            </div>
+            <a href="../index.html" class="btn-card">Voltar para a Home</a>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </main>
+</body>

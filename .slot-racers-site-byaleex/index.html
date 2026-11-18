@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLOT RACERS: Arcade Duel — Do Atari 2600 ao Navegador</title>
+  <meta name="description" content="Releitura moderna do clássico Slot Racers do Atari 2600 em HTML5 Canvas e Multiplayer Local.">
+
+  <!-- Fonte Arcade e Display do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <!-- EFEITO CRT / SCANLINE DE FLIPERAMA RETRÔ -->
+  <div class="overlay-scanlines" aria-hidden="true"></div>
+
+  <!-- CABEÇALHO GAMIFICADO -->
+  <header id="cabecalho-arcade">
+    <div class="container container-header">
+      <div class="marca-jogo">
+        <span class="badge-retro">ATARI 2600 REMAKE</span>
+        <h1 class="logo-texto">SLOT<span>RACERS</span></h1>
+      </div>
+
+      <nav id="menu-navegacao" aria-label="Navegação do site">
+        <ul class="nav-links">
+          <li><a href="#arena">A Arena</a></li>
+          <li><a href="#historia">Origem 1978</a></li>
+          <li><a href="#jogabilidade">Como Jogar</a></li>
+          <li><a href="#controles">Controles P1 & P2</a></li>
+          <li><a href="#conquistas">Conquistas</a></li>
+        </ul>
+      </nav>
+
+      <a href="../../curriculo-project-byaleex/index.html" class="btn-play-header">HOME</a>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+
+    <!-- SEÇÃO HERO / APRESENTAÇÃO NARRATIVA -->
+    <section id="hero" class="secao-hero">
+      <div class="container hero-grid">
+        <div class="hero-info">
+          <span class="tag-alerta">DUELO MULTIPLAYER LOCAL 1v1</span>
+          <h2 class="hero-titulo">Ligue os motores. Dispare mísseis guiados. Sobreviva no labirinto.</h2>
+          <p class="hero-descricao">
+            Uma disputa de alta voltagem onde carros blindados colidem em labirintos estreitos. Desvie das esquinas, calcule os ricochetes dos seus projéteis e prove quem é o rei indiscutível do mesmo teclado.
+          </p>
+          <div class="hero-acoes">
+            <a href="#arena" class="btn-cta primario">Batalhar Agora</a>
+            <a href="#controles" class="btn-cta secundario">Ver Teclas de Comando</a>
+          </div>
+        </div>
+
+        <div class="hero-preview">
+          <div class="card-versus">
+            <div class="lado-p1">
+              <span class="icone-carro">🏎️</span>
+              <span class="rotulo-p">PLAYER 1</span>
+              <span class="cor-p1">Vermelho</span>
+            </div>
+            <div class="divisor-vs">VS</div>
+            <div class="lado-p2">
+              <span class="icone-carro">🚙</span>
+              <span class="rotulo-p">PLAYER 2</span>
+              <span class="cor-p2">Ciano</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- SEÇÃO HISTÓRICA DO ATARI 2600 -->
+    <section id="historia" class="secao-historia">
+      <div class="container">
+        <div class="cabecalho-bloco">
+          <span class="sub-categoria">Túnel do Tempo</span>
+          <h2>Do Cartucho de 1978 ao Navegador</h2>
+        </div>
+
+        <div class="historia-grid">
+          <article class="card-historia">
+            <span class="ano-badge">1978</span>
+            <h3>A Criação por Warren Robinett</h3>
+            <p>
+              Originalmente lançado para o clássico console Atari 2600, <em>Slot Racers</em> foi programado pelo lendário Warren Robinett (mesmo criador de <em>Adventure</em> e do primeiro easter egg documentado da história dos games).
+            </p>
+          </article>
+
+          <article class="card-historia">
+            <span class="ano-badge">MECÂNICA</span>
+            <h3>Trilhos e Projéteis Teleguiados</h3>
+            <p>
+              Ao contrário dos jogos de corrida comuns, em Slot Racers os carros se movimentam em canaletas/trilhos de um labirinto fechado e atiram mísseis que podem ser curvados e ricocheteiam nas paredes.
+            </p>
+          </article>
+
+          <article class="card-historia">
+            <span class="ano-badge">RELEITURA</span>
+            <h3>Adaptação Orientada a Objetos</h3>
+            <p>
+              Nossa versão moderna recria essa experiência com classes JavaScript dedicadas (Player, Carro, Míssil, Labirinto, Colisões), mantendo o dinamismo da disputa cara a cara no mesmo computador.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO COMO JOGAR / JOGABILIDADE -->
+    <section id="jogabilidade" class="secao-jogabilidade">
+      <div class="container">
+        <div class="cabecalho-bloco">
+          <span class="sub-categoria">Manual de Batalha</span>
+          <h2>Regras da Pista e Sobrevivência</h2>
+        </div>
+
+        <div class="regras-grid">
+          <div class="regra-item">
+            <div class="regra-numero">01</div>
+            <h4>Curvas de Precisão</h4>
+            <p>Os carrinhos deslizam pelos corredores do labirinto. Antecipe a esquina para mudar de direção sem bater em becos sem saída.</p>
+          </div>
+
+          <div class="regra-item">
+            <div class="regra-numero">02</div>
+            <h4>Mísseis Curvos</h4>
+            <p>Seus disparos viajam pelas canaletas e continuam obedecendo as setas direcionais enquanto estão em voo. Use os ângulos para emboscadas.</p>
+          </div>
+
+          <div class="regra-item">
+            <div class="regra-numero">03</div>
+            <h4>Pontuação e Respawn</h4>
+            <p>Cada acerto no adversário garante 1 Ponto de Vitória. O jogador atingido renasce na sua base de partida após um breve tempo de invencibilidade.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO CONTROLES MULTIPLAYER LOCAL -->
+    <section id="controles" class="secao-controles">
+      <div class="container">
+        <div class="cabecalho-bloco">
+          <span class="sub-categoria">Mapeamento de Teclas</span>
+          <h2>Comandos de 2 Jogadores no Mesmo Teclado</h2>
+          <p>Antecipe a curva com A/D ou as setas: o carro só vira no próximo cruzamento livre. Ao bater na parede, vira 90° à direita; se o caminho estiver bloqueado, tenta à esquerda. Em becos sem saída, retorna pelo corredor.</p>
+        </div>
+
+        <div class="grid-jogadores">
+          <!-- CARD PLAYER 1 -->
+          <div class="card-player player1">
+            <div class="cabecalho-player">
+              <span class="player-tag">JOGADOR 1</span>
+              <h3>Piloto Vermelho (Carro 1)</h3>
+            </div>
+            <div class="teclas-grid">
+              <div class="tecla-linha">
+                <span class="tecla-box">W</span>
+                <span class="funcao-texto">Acelerar para frente</span>
+              </div>
+              <div class="tecla-linha">
+                <span class="tecla-box">S</span>
+                <span class="funcao-texto">Frear</span>
+              </div>
+              <div class="tecla-linha">
+                <span class="tecla-box">A</span>
+                <span class="funcao-texto">Solicitar curva à esquerda</span>
+              </div>
+              <div class="tecla-linha">
+                <span class="tecla-box">D</span>
+                <span class="funcao-texto">Solicitar curva à direita</span>
+              </div>
+              <div class="tecla-linha acao">
+                <span class="tecla-box barra-espaco">ESPAÇO</span>
+                <span class="funcao-texto">Disparar Míssil</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD PLAYER 2 -->
+          <div class="card-player player2">
+            <div class="cabecalho-player">
+              <span class="player-tag">JOGADOR 2</span>
+              <h3>Piloto Ciano (Carro 2)</h3>
+            </div>
+            <div class="teclas-grid">
+              <div class="tecla-linha">
+                <span class="tecla-box">↑</span>
+                <span class="funcao-texto">Acelerar para frente</span>
+              </div>
+              <div class="tecla-linha">
+                <span class="tecla-box">↓</span>
+                <span class="funcao-texto">Frear</span>
+              </div>
+              <div class="tecla-linha">
+                <span class="tecla-box">←</span>
+                <span class="funcao-texto">Solicitar curva à esquerda</span>
+              </div>
+              <div class="tecla-linha">
+                <span class="tecla-box">→</span>
+                <span class="funcao-texto">Solicitar curva à direita</span>
+              </div>
+              <div class="tecla-linha acao">
+                <span class="tecla-box tecla-enter">ENTER</span>
+                <span class="funcao-texto">Disparar Míssil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO ARENA DO JOGO (ONDE FICA O CANVAS) -->
+    <section id="arena" class="secao-arena">
+      <div class="container">
+        <div class="moldura-arcade">
+          <div class="arcade-topo">
+            <span class="led red"></span>
+            <span class="led yellow"></span>
+            <span class="led green"></span>
+            <span class="arcade-title">SLOT RACERS MULTIPLAYER ENGINE 2D</span>
+            <span class="score-p1" id="display-p1">P1 SCORE: 0</span>
+            <span class="score-p2" id="display-p2">P2 SCORE: 0</span>
+          </div>
+
+          <!-- ÁREA DO JOGO -->
+          <div class="canvas-screen" id="container-jogo-canvas">
+            <div class="game-toolbar">
+              <div class="maze-picker" role="group" aria-label="Escolha do labirinto">
+                <span class="toolbar-label">LABIRINTO</span>
+                <button class="maze-button is-active" type="button" data-maze="0" aria-pressed="true">
+                  <span class="maze-number">01</span> Closed
+                </button>
+                <button class="maze-button" type="button" data-maze="1" aria-pressed="false">
+                  <span class="maze-number">02</span> Circuito Hot
+                </button>
+                <button class="maze-button" type="button" data-maze="2" aria-pressed="false">
+                  <span class="maze-number">03</span> Retro Camp
+                </button>
+              </div>
+              <div class="game-actions">
+                <button class="action-button" id="pauseButton" type="button" aria-pressed="false" aria-label="Pausar jogo">Ⅱ <span>Pausar</span></button>
+                <button class="action-button restart-button" id="restartButton" type="button" aria-label="Reiniciar partida">↻ <span>Reiniciar</span></button>
+              </div>
+            </div>
+
+            <canvas id="gameCanvas" width="960" height="600" tabindex="0" role="img" aria-label="Slot Racers para dois jogadores. Use o teclado para controlar os carros.">
+              Seu navegador não suporta a tag HTML5 Canvas.
+            </canvas>
+            <p class="game-status" id="gameStatus" role="status" aria-live="polite">Partida pronta. Insira suas fichas!</p>
+          </div>
+
+          <div class="arcade-base">
+            <span>MODO: LOCAL 2 PLAYERS</span>
+            <span>MOTOR: HTML5 CANVAS 2D + JAVASCRIPT POO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO GAMIFICADA DE CONQUISTAS (ACHIEVEMENTS) -->
+    <section id="conquistas" class="secao-conquistas">
+      <div class="container">
+        <div class="cabecalho-bloco">
+          <span class="sub-categoria">Desafios Desbloqueáveis</span>
+          <h2>Mural de Troféus</h2>
+        </div>
+
+        <div class="grid-achievements" id="achievements-lista">
+          <div class="card-trofeu desbloqueado" id="ach-1">
+            <span class="trofeu-icone">👾</span>
+            <h4>Nostalgia Viva</h4>
+            <p>Conheceu a história do clássico de 1978 do Atari 2600.</p>
+          </div>
+
+          <div class="card-trofeu desbloqueado" id="ach-2">
+            <span class="trofeu-icone">🎮</span>
+            <h4>Pacto de Teclado</h4>
+            <p>Configurou dois jogadores compartilhando a mesma mesa.</p>
+          </div>
+
+          <div class="card-trofeu" id="ach-3">
+            <span class="trofeu-icone">🎯</span>
+            <h4>Tiro com Efeito</h4>
+            <p>Acertou o oponente após fazer o míssil fazer uma curva no labirinto.</p>
+          </div>
+
+          <div class="card-trofeu" id="ach-4">
+            <span class="trofeu-icone">🏆</span>
+            <h4>Campeão da Pista</h4>
+            <p>Alcançou 5 pontos em uma única partida multiplayer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ GAMIFICADO -->
+  <footer id="rodape-arcade">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <p class="arcade-brand">SLOT RACERS: 1978 &bull; 2026</p>
+        <p>Projeto de Desenvolvimento Web e Canvas 2D Orientado a Objetos.</p>
+      </div>
+      <div class="footer-right">
+        <p>Criado para 2 Jogadores &bull; Compatível com Teclado Local</p>
+      </div>
+    </div>
+  </footer>
+
+  <audio id="music" src="audio/music.wav" loop preload="auto"></audio>
+  <audio id="shotp1" src="audio/shotp1.wav" preload="auto"></audio>
+  <audio id="shotp2" src="audio/shotp2.mp3" preload="auto"></audio>
+
+  <script src="js/game.js" defer></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

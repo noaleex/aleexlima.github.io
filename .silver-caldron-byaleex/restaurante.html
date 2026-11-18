@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caldeirão de Prata</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="main-header" class="sidebar">
+        <div class="logo-container">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            
+            <button class="openbtn" onclick="openNav()">
+                <img src="assets/image/logo.png" alt="Logo Caldeirão" id="main-logo">
+            </button>
+        </div>
+
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <img src="assets/image/homeicon.png" class="nav-icon">
+                        <span class="nav-text">Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html" class="nav-link">
+                        <img src="assets/image/cardapioicon.png" class="nav-icon">
+                        <span class="nav-text">Cardápio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="restaurante.html" class="nav-link">
+                        <img src="assets/image/restauranticon.png" class="nav-icon">
+                        <span class="nav-text">Restaurante</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="chef.html" class="nav-link">
+                        <img src="assets/image/cheficon.png" class="nav-icon">
+                        <span class="nav-text">O Chef</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="history-section">
+            <h2 class="epic-title">A Linhagem do Prata e do Sangue</h2>
+
+            <article class="history-block">
+                <h3>O Surgimento: A Ambição de um Renegado (1920)</h3>
+                <p>
+                    O Caldeirão de Prata não nasceu em um ponto turístico bruxo.
+                    Ele surgiu no subsolo de um antigo orfanato em Londres, onde
+                    Magnus Riddle (um antepassado distante, cujos registros foram
+                    "convenientemente" apagados) começou a experimentar a fusão
+                    entre alta culinária e poções proibidas. Na época, a ideia de
+                    comer algo que alterasse permanentemente sua percepção era vista
+                    como heresia pelo Ministério da Magia.
+                </p>
+
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="assets/image/passado1.png" alt="O Surgimento: A Ambição de um Renegado (1920)" class="history-images">
+                    </a>
+                </div>
+            </article>
+
+            <article class="history-block highlight">
+                <h3>A Ascensão e a "Noite da Névoa Esmeralda" (1950)</h3>
+                <p>
+                    Nos anos 50, o restaurante tornou-se o epicentro da elite bruxa.
+                    Dizem que decisões políticas cruciais para o mundo mágico foram
+                    tomadas entre uma garrafa de Vinho de Sangue de Unicórnio (Sintético)
+                    e um Bife de Dragão. Foi nessa época que Magnus instalou o famoso
+                    "Teto de Mercúrio", que reflete o humor dos clientes através de cores metálicas.
+                </p>
+
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="assets/image/passado2.png" alt="O Surgimento: A Ambição de um Renegado (1920)" class="history-images">
+                    </a>
+                </div>
+            </article>
+
+            <article class="history-block">
+                <h3>A Queda: O Grande Selamento (1980)</h3>
+                <p>
+                    Nem tudo foi glória. Durante o auge das tensões no mundo bruxo, o
+                    Ministério da Magia tentou fechar o restaurante, alegando que Magnus
+                    usava Veritaserum (poção da verdade) nos molhos para extrair segredos
+                    de funcionários de alto escalão. O restaurante faliu legalmente, as
+                    portas foram seladas com magia antiga e o local foi esquecido por décadas,
+                    tornando-se uma lenda urbana.
+                </p>
+
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="assets/image/passado3.png" alt="O Surgimento: A Ambição de um Renegado (1920)" class="history-images">
+                    </a>
+                </div>
+            </article>
+
+            <article class="history-block">
+                <h3>O Renascimento: A Era de Magnus Riddle Jr. (Hoje)</h3>
+                <p>
+                    Após anos de abandono, o herdeiro direto do nome, o atual Magnus Riddle,
+                    recuperou as chaves por direito de sangue. Ele não apenas limpou o pó das
+                    masmorras, mas modernizou o conceito. O Caldeirão de Prata reabriu não como
+                    uma taberna, mas como um templo de luxo. Hoje, o restaurante opera com uma
+                    lista de espera de seis meses e é protegido por feitiços que impedem que
+                    qualquer trouxa (ou bruxo indesejado) sequer perceba a porta de entrada.
+                </p>
+
+                <div class="image-wrapper">
+                    <a href="#">
+                        <img src="assets/image/passado4.png" alt="O Surgimento: A Ambição de um Renegado (1920)" class="history-images">
+                    </a>
+                </div>
+            </article>
+        </section>
+        <footer id="main-footer">
+            <div class="contato">
+                <p><strong>Telefone:</strong> (189) 9666-7666</p>
+                <p><strong>E-mail:</strong> contato@caldeiraodeprata.com</p>
+                <p><strong>Endereço:</strong> Av. Escondido dos Olhares Curiosos, 777</p>
+            </div>
+
+            <div class="copyright">
+                <p style="margin-top: 50px;">&copy; 2026 Caldeirão de Prata - Desenvolvido por Lumin</p>
+                <p>A magia está nos detalhes.</p>
+            </div>
+            <a href="../index.html" class="btn-card">Voltar para a Home</a>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </main>
+
+</body>

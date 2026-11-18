@@ -1,0 +1,147 @@
+/* Estilos globais usando tag e ID */
+body {
+    background-color: #121721;
+    color: #F5F5F5;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(27, 46, 75, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(0, 210, 255, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Mouse Follower Glow (ID) */
+#glow-orb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+}
+
+/* Delays de transição aplicados via ID */
+#soft-skills-card,
+#experience-section {
+    transition-delay: 100ms;
+}
+
+#languages-card,
+#education-section {
+    transition-delay: 200ms;
+}
+
+#skills-section {
+    transition-delay: 300ms;
+}
+
+#portfolio-section {
+    transition-delay: 400ms;
+}
+
+/* Glassmorphism Cards (IDs e Classes) */
+#profile-card,
+#soft-skills-card,
+#languages-card,
+#objective-section,
+#experience-section,
+#education-section,
+#skills-section,
+#portfolio-section,
+#modalContent,
+.glass-card {
+    background: rgba(27, 46, 75, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(62, 70, 95, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+#profile-card:hover,
+#soft-skills-card:hover,
+#languages-card:hover,
+#objective-section:hover,
+#experience-section:hover,
+#education-section:hover,
+#skills-section:hover,
+#portfolio-section:hover,
+.glass-card:hover {
+    border-color: rgba(0, 210, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Glowing accents */
+.neon-text {
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+#objective-section,
+.neon-border-left {
+    border-left: 2px solid #00d2ff;
+    box-shadow: -2px 0 10px rgba(0, 210, 255, 0.2);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121721;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3E465F;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00d2ff;
+}
+
+/* Hide scrollbar for carousel */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Blinking Cursor for Typewriter (ID) */
+#typewriter::after,
+.cursor-blink::after {
+    content: '|';
+    color: #00d2ff;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Timeline Dots */
+.timeline-dot {
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+}

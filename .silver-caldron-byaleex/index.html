@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caldeirão de Prata</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header id="main-header" class="sidebar">
+        <div class="logo-container">
+            <button class="closebtn" onclick="closeNav()">&times;</button>
+            
+            <button class="openbtn" onclick="openNav()">
+                <img src="assets/image/logo.png" alt="Logo Caldeirão" id="main-logo">
+            </button>
+        </div>
+
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <img src="assets/image/homeicon.png" class="nav-icon">
+                        <span class="nav-text">Início</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cardapio.html" class="nav-link">
+                        <img src="assets/image/cardapioicon.png" class="nav-icon">
+                        <span class="nav-text">Cardápio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="restaurante.html" class="nav-link">
+                        <img src="assets/image/restauranticon.png" class="nav-icon">
+                        <span class="nav-text">Restaurante</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="chef.html" class="nav-link">
+                        <img src="assets/image/cheficon.png" class="nav-icon">
+                        <span class="nav-text">O Chef</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>O Caldeirão de Prata</h1>
+                <p id="typewriter"></p>
+            </div>
+
+            <div>
+                <img src="assets/image/hero.png" alt="Magnus Riddle em seu laboratório" class="hero-images">
+            </div>
+        </section>
+
+        <section class="cards-top-container">
+            <div class="card card-black">
+                <h2>Magnus Riddle</h2>
+                <p>"Herdeiro de uma linhagem complexa, Magnus encontrou sua verdadeira
+                    vocação não no poder, mas na transformação. Considerado um dos maiores
+                    alquimistas gastronômicos da atualidade, ele utiliza técnicas ancestrais
+                    de preparo de poções para extrair sabores que desafiam a lógica trouxa
+                    e bruxa. Para Magnus, cozinhar é a forma mais pura de magia: aquela que
+                    nutre a alma e altera os sentidos."
+                </p>
+                <a href="chef.html" class="btn-card">Ler mais...</a>
+            </div>
+            <div class="card card-black">
+                <h2>O Caldeirão de Prata</h2>
+                <p>"Nascido do desejo de criar um santuário para o paladar, o Caldeirão de
+                    Prata não é apenas um restaurante, mas um marco na história da culinária
+                    bruxa. Localizado sob as fundações de um antigo observatório astronômico,
+                    o estabelecimento utiliza o metal que lhe dá nome para garantir a pureza
+                    absoluta de suas infusões. Aqui, a tradição dos Riddle se reinventa em cada
+                    banquete, unindo elegância secular com a inovação das artes mágicas."
+                </p>
+                <a href="restaurante.html" class="btn-card">Ler mais...</a>
+            </div>
+        </section>
+
+        <section class="carousel-section">
+             <div class="carousel-container">
+                <div class="card-green">
+                    <h2 class="section-title">Filet ao Sangue de Dragão</h2>
+                    <p class="section-text">
+                        Medalhões de filet mignon selados em caldeirão de prata, banhados
+                        em um redução de vinho do Porto e especiarias orientais que emitem
+                        um leve brilho rubi. Acompanha purê de mandrágora defumada.
+                    </p>
+                    <a href="receitas/salgado.html" class="btn-card">Detalhes...</a>
+                </div>
+                <div class="card-green">
+                    <h2 class="section-title">Infusão de Sorte Líquida</h2>
+                    <p class="section-text">
+                        Uma releitura gastronômica da Felix Felicis. Base de champanhe cristalino
+                        com infusão de mel de flores raras e partículas de glitter comestível
+                        que giram perpetuamente no copo. Traz uma sensação imediata de euforia.
+                    </p>
+                    <a href="receitas/bebida.html" class="btn-card">Detalhes...</a>
+                </div>
+                <div class="card-green">
+                    <h2 class="section-title">Esferas de Gryffindor</h2>
+                    <p class="section-text">
+                        Trufas de chocolate belga 70% recheadas com caramelo salgado e envoltas em
+                        folhas de ouro comestível. Ao serem tocadas pela colher, liberam uma fumaça
+                        fria com aroma de baunilha de Madagascar.
+                    </p>
+                    <a href="receitas/doce.html" class="btn-card">Detalhes...</a>
+                </div>
+             </div>
+        </section>
+
+        <footer id="main-footer">
+            <div class="contato">
+                <p><strong>Telefone:</strong> (189) 9666-7666</p>
+                <p><strong>E-mail:</strong> contato@caldeiraodeprata.com</p>
+                <p><strong>Endereço:</strong> Av. Escondido dos Olhares Curiosos, 777</p>
+            </div>
+
+            <div class="copyright">
+                <p style="margin-top: 50px;">&copy; 2026 Caldeirão de Prata - Desenvolvido por Lumin</p>
+                <p>A magia está nos detalhes.</p>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </main>
+</body>
